@@ -205,7 +205,7 @@ public class ZKProcedureCoordinator implements ProcedureCoordinatorRpcs {
     boolean stillGettingNotifications = false;
     do {
       try {
-        LOG.debug("Attempting to clean up reached barrier node for procedure:" + procName);
+        LOG.debug("Attempting to clean up reached barrier node for procedure: " + procName);
         zkProc.clearReachedBarrierNode(procName);
         stillGettingNotifications = false;
       } catch (KeeperException.NotEmptyException e) {
