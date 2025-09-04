@@ -183,7 +183,7 @@ public class ZKProcedureCoordinator implements ProcedureCoordinatorRpcs {
     boolean stillGettingNotifications = false;
     do {
       try {
-        LOG.debug("Attempting to clean up acquired barrier node for procedure:" + procName);
+        LOG.debug("Attempting to clean up acquired barrier node for procedure: " + procName);
         zkProc.clearAcquiredBarrierNode(procName);
         stillGettingNotifications = false;
       } catch (KeeperException.NotEmptyException e) {
